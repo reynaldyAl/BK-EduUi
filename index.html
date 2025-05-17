@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bimbingan Konseling Edu | Pusat Pembelajaran BK</title>
+    <meta name="description" content="Situs edukasi tentang Bimbingan Konseling (BK) yang menyediakan informasi lengkap, layanan, dan sumber daya untuk siswa, guru, dan orangtua.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <style>
+        /* Soft Pattern Background */
+        .bg-soft-pattern {
+            background-color: #f8f9fa;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e6e9ee' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        /* Enhanced Feature Cards */
+        .feature-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #3a5a78;
+        }
+        
+        .icon-container {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .icon-container {
+            transform: scale(1.1);
+        }
+        
+        /* Warm Service Cards */
+        .service-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #3a5a78;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: #334155;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .faq-item:hover .faq-question {
+            border-left: 3px solid #3a5a78;
+        }
+        
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+        
+        .faq-answer.active {
+            padding: 0 1.25rem 1.25rem;
+            max-height: 500px;
+        }
+        
+        /* Improved Buttons */
+        .btn-primary {
+            background-color: #3a5a78;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(58, 90, 120, 0.25);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2c4c6a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(58, 90, 120, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: #3a5a78;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 2px solid #3a5a78;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f0f5fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #3a5a78;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2c4c6a;
+        }
+    </style>
+</head>
+<body class="font-sans bg-soft-pattern text-dark">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-md">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <span class="text-xl font-semibold text-primary hidden md:block">BimbinganKonseling<span class="text-secondary">Edu</span></span>
+                <span class="text-xl font-semibold text-primary md:hidden">BK<span class="text-secondary">Edu</span></span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="index.html" class="text-primary hover:text-secondary transition flex items-center">
+                    <i class="fas fa-home mr-2"></i>Beranda
+                </a></li>
+                <li><a href="./pages/tentang-bk.html" class="text-gray-700 hover:text-primary transition flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i>Tentang BK
+                </a></li>
+                <li><a href="./pages/layanan.html" class="text-gray-700 hover:text-primary transition flex items-center">
+                    <i class="fas fa-hands-helping mr-2"></i>Layanan
+                </a></li>
+                <li><a href="./pages/resources.html" class="text-gray-700 hover:text-primary transition flex items-center">
+                    <i class="fas fa-book-open mr-2"></i>Resources
+                </a></li>
+                <li><a href="./pages/kontak.html" class="text-gray-700 hover:text-primary transition flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>Kontak
+                </a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <ul class="container mx-auto px-4 py-3 space-y-3">
+                <li><a href="index.html" class="block py-2 text-primary font-medium flex items-center">
+                    <i class="fas fa-home mr-2"></i>Beranda
+                </a></li>
+                <li><a href="./pages/tentang-bk.html" class="block py-2 hover:text-primary transition flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i>Tentang BK
+                </a></li>
+                <li><a href="./pages/layanan.html" class="block py-2 hover:text-primary transition flex items-center">
+                    <i class="fas fa-hands-helping mr-2"></i>Layanan
+                </a></li>
+                <li><a href="./pages/resources.html" class="block py-2 hover:text-primary transition flex items-center">
+                    <i class="fas fa-book-open mr-2"></i>Resources
+                </a></li>
+                <li><a href="./pages/kontak.html" class="block py-2 hover:text-primary transition flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>Kontak
+                </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                        Bimbingan Konseling untuk <span class="text-primary">Masa Depan</span> yang Lebih Baik
+                    </h1>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Platform edukasi tentang Bimbingan Konseling yang membantu Anda memahami pentingnya dukungan psikologis dan pendampingan dalam proses pendidikan.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="./pages/tentang-bk.html" class="btn-primary group">
+                            Pelajari BK
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="./pages/layanan.html" class="btn-secondary">
+                            Lihat Layanan
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1599476434558-1957a9a9df9f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Bimbingan Konseling" 
+                             class="rounded-lg shadow-xl w-full md:max-w-md mx-auto hover:shadow-2xl transition-all duration-300">
+                        <!-- Simple Badge -->
+                        <div class="absolute top-4 right-4 bg-white rounded-full py-1 px-3 shadow-md">
+                            <p class="text-primary text-sm font-medium">Edukasi BK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote/Welcome Section -->
+    <section class="py-8 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 italic max-w-3xl mx-auto" data-aos="fade-up">
+                "Bimbingan Konseling bukan hanya tentang menyelesaikan masalah, tetapi juga tentang membantu seseorang menemukan potensi terbaiknya dan mengembangkan diri secara holistik."
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white" id="fitur">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Aspek Penting Bimbingan Konseling</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Bimbingan Konseling tidak hanya menyelesaikan masalah, tetapi juga membangun potensi dan karakter individu melalui berbagai pendekatan.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-container bg-primary text-white">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Perkembangan Psikologis</h3>
+                    <p class="text-gray-600">Memahami dan mendukung perkembangan psikologis peserta didik untuk mencapai kesejahteraan mental yang optimal.</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="text-sm text-primary font-medium">Fokus: Kesehatan mental & emosional</span>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-container bg-secondary text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Bimbingan Akademik</h3>
+                    <p class="text-gray-600">Membantu peserta didik mengatasi kesulitan belajar dan mengembangkan potensi akademik secara maksimal.</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="text-sm text-secondary font-medium">Fokus: Prestasi & strategi belajar</span>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-container bg-accent text-dark">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Keterampilan Sosial</h3>
+                    <p class="text-gray-600">Mengembangkan kemampuan komunikasi, resolusi konflik, dan hubungan interpersonal yang sehat.</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="text-sm text-accent font-medium">Fokus: Interaksi & komunikasi efektif</span>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-container bg-primary text-white">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Perencanaan Karir</h3>
+                    <p class="text-gray-600">Membantu peserta didik mengidentifikasi potensi dan mengarahkan pilihan karir sesuai minat dan bakat.</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="text-sm text-primary font-medium">Fokus: Orientasi masa depan & profesi</span>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-container bg-secondary text-white">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Dukungan Emosional</h3>
+                    <p class="text-gray-600">Menyediakan ruang aman untuk mengekspresikan emosi dan mendapatkan dukungan dalam menghadapi tekanan.</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="text-sm text-secondary font-medium">Fokus: Regulasi emosi & resiliensi</span>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="icon-container bg-accent text-dark">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Pengembangan Pribadi</h3>
+                    <p class="text-gray-600">Membantu peserta didik membangun kepercayaan diri, resiliensi, dan kemampuan mengelola diri.</p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <span class="text-sm text-accent font-medium">Fokus: Kepribadian & konsep diri</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-blue-50" id="tentang">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 order-2 md:order-1" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Apa itu Bimbingan Konseling?</h2>
+                    <p class="text-gray-600 mb-4">
+                        Bimbingan Konseling (BK) adalah layanan bantuan untuk individu atau kelompok agar dapat mandiri dan berkembang secara optimal dalam bidang pribadi, sosial, belajar, karir, dan spiritual melalui berbagai jenis layanan dan kegiatan berdasarkan norma-norma yang berlaku.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Dalam konteks pendidikan, BK berperan penting dalam membantu peserta didik:
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white mr-3">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Memahami diri sendiri dan lingkungannya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white mr-3">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Mengatasi hambatan dan kesulitan belajar</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white mr-3">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Mengembangkan potensi dan keterampilan secara optimal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white mr-3">
+                                <i class="fas fa-check text-xs"></i>
+                            </div>
+                            <span class="text-gray-700">Membuat keputusan yang tepat terkait pendidikan dan karir</span>
+                        </li>
+                    </ul>
+                    <a href="./pages/tentang-bk.html" class="btn-primary inline-block group">
+                        Pelajari Lebih Lanjut
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2" data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Diskusi Bimbingan Konseling" 
+                             class="rounded-lg shadow-xl w-full md:max-w-md mx-auto hover:shadow-2xl transition-all duration-300">
+                         
+                        <!-- Information Card -->
+                        <div class="absolute -bottom-5 -right-5 md:bottom-5 md:right-5 bg-white p-4 rounded-lg shadow-lg max-w-xs hidden md:block">
+                            <p class="text-sm text-gray-600 italic">
+                                Konseling memberikan ruang aman untuk mengekspresikan diri dan mencari solusi bersama
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white" id="layanan">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Layanan Bimbingan Konseling</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">BK menyediakan berbagai layanan untuk membantu peserta didik mengembangkan diri secara menyeluruh.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="mb-4">
+                        <i class="fas fa-user-friends text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Konseling Individual</h3>
+                    <p class="text-gray-600 mb-4">Pertemuan tatap muka secara individual antara konselor dengan peserta didik untuk membahas dan menyelesaikan masalah pribadi.</p>
+                    <div class="flex justify-center">
+                        <span class="bg-blue-50 text-primary text-xs font-medium px-3 py-1 rounded-full">Pendekatan Personal</span>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="mb-4">
+                        <i class="fas fa-users text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Konseling Kelompok</h3>
+                    <p class="text-gray-600 mb-4">Layanan konseling yang memungkinkan beberapa peserta didik membahas dan memecahkan masalah pribadi dalam suasana kelompok.</p>
+                    <div class="flex justify-center">
+                        <span class="bg-blue-50 text-primary text-xs font-medium px-3 py-1 rounded-full">Dinamika Kelompok</span>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="mb-4">
+                        <i class="fas fa-chalkboard-teacher text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Bimbingan Klasikal</h3>
+                    <p class="text-gray-600 mb-4">Layanan bimbingan yang diberikan kepada peserta didik dalam setting kelas untuk memberikan informasi dan pengembangan diri.</p>
+                    <div class="flex justify-center">
+                        <span class="bg-blue-50 text-primary text-xs font-medium px-3 py-1 rounded-full">Pendekatan Kelas</span>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="mb-4">
+                        <i class="fas fa-sitemap text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Konsultasi</h3>
+                    <p class="text-gray-600 mb-4">Membantu individu dalam hubungannya dengan orang lain, seperti guru dengan siswa atau orang tua dengan anak.</p>
+                    <div class="flex justify-center">
+                        <span class="bg-blue-50 text-primary text-xs font-medium px-3 py-1 rounded-full">Solusi Kolaboratif</span>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="mb-4">
+                        <i class="fas fa-diagnoses text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Asesmen & Evaluasi</h3>
+                    <p class="text-gray-600 mb-4">Proses pengumpulan data dan informasi mengenai peserta didik untuk memahami karakteristik dan kebutuhan mereka.</p>
+                    <div class="flex justify-center">
+                        <span class="bg-blue-50 text-primary text-xs font-medium px-3 py-1 rounded-full">Analisis Mendalam</span>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="mb-4">
+                        <i class="fas fa-handshake text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Mediasi</h3>
+                    <p class="text-gray-600 mb-4">Membantu menyelesaikan permasalahan dan konflik antara dua pihak atau lebih melalui proses mediasi yang konstruktif.</p>
+                    <div class="flex justify-center">
+                        <span class="bg-blue-50 text-primary text-xs font-medium px-3 py-1 rounded-full">Resolusi Konflik</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="./pages/layanan.html" class="btn-primary group">
+                    Selengkapnya tentang Layanan BK
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-blue-50" id="faq">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Pertanyaan Umum</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Beberapa pertanyaan yang sering diajukan tentang Bimbingan Konseling dan perannya dalam pendidikan.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apa perbedaan antara bimbingan dan konseling?</span>
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden">
+                        <p class="text-gray-600 pt-4">
+                            <span class="font-medium text-primary">Bimbingan</span> adalah proses pemberian bantuan kepada individu untuk memahami diri dan lingkungannya, 
+                            bersifat preventif dan developmental. Sedangkan <span class="font-medium text-primary">konseling</span> adalah proses pemberian bantuan yang 
+                            lebih intensif, bersifat kuratif, dan dilakukan dalam situasi tatap muka antara konselor dan 
+                            konseli untuk mengatasi masalah yang sedang dihadapi.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Siapa yang bisa memanfaatkan layanan bimbingan konseling?</span>
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden">
+                        <p class="text-gray-600 pt-4">
+                            Layanan bimbingan konseling terbuka untuk semua peserta didik, tidak hanya yang bermasalah. 
+                            Siapapun yang ingin mengembangkan diri, memahami potensi, merencanakan karir, atau 
+                            menyelesaikan masalah pribadi, sosial, dan akademik dapat memanfaatkan layanan BK.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Kapan seseorang perlu berkonsultasi dengan konselor BK?</span>
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden">
+                        <p class="text-gray-600 pt-4">
+                            Seseorang perlu berkonsultasi dengan konselor BK ketika menghadapi:
+                            <ul class="list-disc ml-6 mt-2 space-y-1">
+                                <li>Kesulitan dalam belajar atau penurunan prestasi</li>
+                                <li>Masalah hubungan sosial dengan teman atau keluarga</li>
+                                <li>Kebingungan dalam mengambil keputusan pendidikan atau karir</li>
+                                <li>Masalah emosional seperti stres, kecemasan, atau depresi ringan</li>
+                                <li>Ingin mengembangkan potensi dan keterampilan diri</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bagaimana kerahasiaan dalam proses konseling terjaga?</span>
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden">
+                        <p class="text-gray-600 pt-4">
+                            Konselor BK terikat oleh kode etik profesi yang mewajibkan menjaga kerahasiaan informasi yang 
+                            disampaikan oleh konseli. Segala hal yang dibahas dalam sesi konseling bersifat rahasia dan 
+                            tidak akan dibagikan kecuali dalam situasi tertentu seperti:
+                            <ul class="list-disc ml-6 mt-2 space-y-1">
+                                <li>Ada izin dari konseli untuk membagikan informasi</li>
+                                <li>Konseli berisiko membahayakan diri sendiri atau orang lain</li>
+                                <li>Ada perintah pengadilan</li>
+                                <li>Kasus pelecehan atau penelantaran anak</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apa peran orangtua dalam program bimbingan konseling di sekolah?</span>
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden">
+                        <p class="text-gray-600 pt-4">
+                            Orangtua memiliki peran penting dalam program bimbingan konseling, antara lain:
+                            <ul class="list-disc ml-6 mt-2 space-y-1">
+                                <li>Berpartisipasi dalam konsultasi dengan konselor mengenai perkembangan anak</li>
+                                <li>Memberikan informasi yang relevan tentang anak kepada konselor</li>
+                                <li>Mendukung program-program BK yang dijalankan di sekolah</li>
+                                <li>Menindaklanjuti rekomendasi dari konselor di rumah</li>
+                                <li>Membantu anak menerapkan keterampilan dan strategi yang dipelajari dari konselor</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-gray-600 mb-4">Masih punya pertanyaan lain?</p>
+                <a href="./pages/kontak.html" class="btn-primary">
+                    Hubungi Saya
+                    <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-10 bg-white border-t border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center text-center">
+                <div class="w-full md:w-1/4 p-4">
+                    <div class="text-4xl font-bold text-primary mb-2">85%</div>
+                    <p class="text-gray-600 text-sm">Siswa mengalami peningkatan pemahaman diri</p>
+                </div>
+                <div class="w-full md:w-1/4 p-4">
+                    <div class="text-4xl font-bold text-primary mb-2">75%</div>
+                    <p class="text-gray-600 text-sm">Perbaikan keterampilan sosial</p>
+                </div>
+                <div class="w-full md:w-1/4 p-4">
+                    <div class="text-4xl font-bold text-primary mb-2">90%</div>
+                    <p class="text-gray-600 text-sm">Lebih percaya diri dalam keputusan karir</p>
+                </div>
+                <div class="w-full md:w-1/4 p-4">
+                    <div class="text-4xl font-bold text-primary mb-2">70%</div>
+                    <p class="text-gray-600 text-sm">Peningkatan prestasi akademik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+            <h2 class="text-3xl font-bold mb-6">Mulai Perjalanan Edukasi BK Anda Sekarang</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Pelajari lebih dalam tentang Bimbingan Konseling dan bagaimana hal ini dapat membantu perkembangan pendidikan dan pribadi yang optimal.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="./pages/resources.html" class="bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-blue-50 transition flex items-center justify-center">
+                    Akses Materi Edukasi
+                    <i class="fas fa-book-open ml-2"></i>
+                </a>
+                <a href="./pages/kontak.html" class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:bg-opacity-10 transition flex items-center justify-center">
+                    Hubungi Saya
+                    <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Footer Column 1 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">BimbinganKonselingEdu</h4>
+                    <p class="text-gray-400 mb-4">Platform edukasi tentang Bimbingan Konseling untuk membantu pengembangan potensi diri melalui layanan profesional.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Footer Column 2 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Tautan Penting</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Beranda
+                        </a></li>
+                        <li><a href="./pages/tentang-bk.html" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Tentang BK
+                        </a></li>
+                        <li><a href="./pages/layanan.html" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Layanan
+                        </a></li>
+                        <li><a href="./pages/resources.html" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Resources
+                        </a></li>
+                        <li><a href="./pages/kontak.html" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Kontak
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Column 3 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Materi Edukasi</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Artikel & Blog
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>E-book Gratis
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Webinar & Workshop
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Studi Kasus
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2"></i>Infografis
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Column 4 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Kontak Saya</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+                            <span class="text-gray-400">Jl. Pendidikan No. 123, Jakarta, Indonesia</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-secondary"></i>
+                            <span class="text-gray-400">+62 812 3456 7890</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-secondary"></i>
+                            <span class="text-gray-400">info@bimbingankonseling.edu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 mt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 BimbinganKonselingEdu. Hak Cipta Dilindungi.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition">Kebijakan Privasi</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition">Syarat & Ketentuan</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition">Peta Situs</a>
+                    </div>
+                </div>
+                
+                <!-- Last updated info -->
+                <div class="mt-4 text-center">
+                    <p class="text-gray-500 text-xs">Terakhir diperbarui: 15 Mei 2025 | <span class="text-gray-400">reynaldyAl</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50 hover:bg-primary-dark">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // FAQ Accordion Functionality
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Toggle answer visibility
+                    answer.classList.toggle('active');
+                    answer.classList.toggle('hidden');
+                    
+                    // Toggle icon rotation
+                    if (answer.classList.contains('active')) {
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0)';
+                    }
+                });
+            });
+            
+// Perbaikan untuk Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            // Toggle menu visibility
+            mobileMenu.classList.toggle('hidden');
+            
+            // Get the icon element inside the button
+            const icon = this.querySelector('i');
+            
+            // Toggle between bars and times icon
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+});
+            
+            // Back to Top Button Functionality
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                } else {
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Add subtle hover animations to service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('i');
+                    icon.classList.add('animate-pulse');
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('i');
+                    icon.classList.remove('animate-pulse');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

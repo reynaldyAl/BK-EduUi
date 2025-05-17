@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Bimbingan Konseling | BK Edu</title>
+    <meta name="description" content="Hubungi saya untuk informasi lebih lanjut tentang Bimbingan Konseling, layanan, dan kerja sama. Temukan lokasi dan jam operasional saya.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="font-sans bg-light text-dark">
+<!-- Header/Navigation for kontak.html -->
+<header class="sticky top-0 bg-white shadow-md z-50">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="../index.html" class="flex items-center space-x-2">
+            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-md">
+                <i class="fas fa-comments"></i>
+            </div>
+            <span class="text-xl font-semibold text-primary hidden md:block">BimbinganKonseling<span class="text-secondary">Edu</span></span>
+            <span class="text-xl font-semibold text-primary md:hidden">BK<span class="text-secondary">Edu</span></span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <ul class="hidden md:flex space-x-8 font-medium">
+            <li><a href="../index.html" class="text-gray-700 hover:text-primary transition flex items-center">
+                <i class="fas fa-home mr-2"></i>Beranda
+            </a></li>
+            <li><a href="./tentang-bk.html" class="text-gray-700 hover:text-primary transition flex items-center">
+                <i class="fas fa-info-circle mr-2"></i>Tentang BK
+            </a></li>
+            <li><a href="./layanan.html" class="text-gray-700 hover:text-primary transition flex items-center">
+                <i class="fas fa-hands-helping mr-2"></i>Layanan
+            </a></li>
+            <li><a href="./resources.html" class="text-gray-700 hover:text-primary transition flex items-center">
+                <i class="fas fa-book-open mr-2"></i>Resources
+            </a></li>
+            <li><a href="./kontak.html" class="text-primary flex items-center">
+                <i class="fas fa-envelope mr-2"></i>Kontak
+            </a></li>
+        </ul>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </nav>
+    
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <ul class="container mx-auto px-4 py-3 space-y-3">
+            <li><a href="../index.html" class="block py-2 hover:text-primary transition flex items-center">
+                <i class="fas fa-home mr-2"></i>Beranda
+            </a></li>
+            <li><a href="./tentang-bk.html" class="block py-2 hover:text-primary transition flex items-center">
+                <i class="fas fa-info-circle mr-2"></i>Tentang BK
+            </a></li>
+            <li><a href="./layanan.html" class="block py-2 hover:text-primary transition flex items-center">
+                <i class="fas fa-hands-helping mr-2"></i>Layanan
+            </a></li>
+            <li><a href="./resources.html" class="block py-2 hover:text-primary transition flex items-center">
+                <i class="fas fa-book-open mr-2"></i>Resources
+            </a></li>
+            <li><a href="./kontak.html" class="block py-2 text-primary font-medium flex items-center">
+                <i class="fas fa-envelope mr-2"></i>Kontak
+            </a></li>
+        </ul>
+    </div>
+</header>
+<!-- Enhanced Profile Section -->
+<section class="py-16 bg-gradient-to-b from-blue-50 to-white border-t border-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-dark mb-2 text-center" data-aos="fade-up">Tentang Saya</h2>
+        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            "Pendampingan yang tepat akan membuka jalan menuju pemahaman diri dan potensi terbaik setiap individu"
+        </p>
+        
+        <div class="max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Left Column - Photo and Basic Info -->
+                    <div class="md:w-2/5 bg-primary bg-opacity-10 p-8 flex flex-col items-center justify-center">
+                        <!-- Profile Photo with Animation -->
+                        <div class="w-48 h-48 md:w-56 md:h-56 mb-6 relative">
+                            <div class="absolute inset-0 rounded-full bg-primary opacity-20 animate-pulse"></div>
+                            <div class="absolute inset-0 rounded-full bg-primary opacity-10" style="animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite 1s"></div>
+                            <div class="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg relative z-10">
+                                <img src="../assets/images/inda-profile.png" alt="Inda Maharani" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        
+                        <!-- Basic Info -->
+                        <h3 class="text-2xl font-bold text-dark mb-2 text-center">Inda Maharani</h3>
+                        <p class="text-primary font-medium mb-4 text-center">Konselor Bimbingan Konseling</p>
+                        
+                        <!-- Contact Quick Info -->
+                        <div class="grid grid-cols-2 gap-4 w-full max-w-xs">
+                            <div class="flex flex-col items-center text-center p-3 rounded-lg bg-white shadow-sm">
+                                <i class="fas fa-graduation-cap text-primary mb-2"></i>
+                                <span class="text-gray-800 text-sm font-medium">Mahasiswa BK</span>
+                                <span class="text-gray-600 text-xs">Semester 6</span>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-3 rounded-lg bg-white shadow-sm">
+                                <i class="fas fa-star text-primary mb-2"></i>
+                                <span class="text-gray-800 text-sm font-medium">Pengalaman</span>
+                                <span class="text-gray-600 text-xs">3+ Tahun</span>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-3 rounded-lg bg-white shadow-sm">
+                                <i class="fas fa-users text-primary mb-2"></i>
+                                <span class="text-gray-800 text-sm font-medium">Konseli</span>
+                                <span class="text-gray-600 text-xs">150+</span>
+                            </div>
+                            <div class="flex flex-col items-center text-center p-3 rounded-lg bg-white shadow-sm">
+                                <i class="fas fa-certificate text-primary mb-2"></i>
+                                <span class="text-gray-800 text-sm font-medium">Sertifikasi</span>
+                                <span class="text-gray-600 text-xs">Profesional</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="flex justify-center space-x-3 mt-6">
+                            <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-full bg-white text-blue-700 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="w-9 h-9 rounded-full bg-white text-blue-400 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/indajw/" target="_blank" class="w-9 h-9 rounded-full bg-white text-pink-600 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:inda_maharaniBK@bimbingankonseling.edu" class="w-9 h-9 rounded-full bg-white text-red-500 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Profile Details -->
+                    <div class="md:w-3/5 p-8">
+                        <div class="mb-6">
+                            <h4 class="text-xl font-semibold text-primary mb-3 flex items-center">
+                                <i class="fas fa-user-circle mr-2"></i>
+                                Tentang Diri Saya
+                            </h4>
+                            <p class="text-gray-600 mb-4">
+                                Saya adalah mahasiswa tahun ketiga (semester 6) jurusan Bimbingan dan Konseling yang memiliki passion dalam bidang konseling pendidikan. Dengan pendekatan yang ramah dan terbuka, saya fokus pada pendampingan remaja dalam menemukan potensi diri dan perencanaan karir.
+                            </p>
+                            <p class="text-gray-600">
+                                Pendekatan konseling yang saya terapkan bersifat humanistik dan berpusat pada klien, memastikan setiap individu merasa nyaman dan didengar. Saya percaya bahwa setiap orang memiliki kekuatan dalam dirinya untuk tumbuh dan berkembang dengan pendampingan yang tepat.
+                            </p>
+                        </div>
+                        
+                        <!-- Expertise & Specialization -->
+                        <div class="mb-6">
+                            <h4 class="text-xl font-semibold text-primary mb-3 flex items-center">
+                                <i class="fas fa-award mr-2"></i>
+                                Keahlian & Spesialisasi
+                            </h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="flex items-center bg-blue-50 p-3 rounded-lg">
+                                    <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                                    <span class="text-gray-700 text-sm">Konseling Karir</span>
+                                </div>
+                                <div class="flex items-center bg-blue-50 p-3 rounded-lg">
+                                    <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                                    <span class="text-gray-700 text-sm">Motivasi Belajar</span>
+                                </div>
+                                <div class="flex items-center bg-blue-50 p-3 rounded-lg">
+                                    <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                                    <span class="text-gray-700 text-sm">Manajemen Stres</span>
+                                </div>
+                                <div class="flex items-center bg-blue-50 p-3 rounded-lg">
+                                    <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                                    <span class="text-gray-700 text-sm">Perkembangan Remaja</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Details -->
+                        <div class="mb-6">
+                            <h4 class="text-xl font-semibold text-primary mb-3 flex items-center">
+                                <i class="fas fa-address-card mr-2"></i>
+                                Informasi Kontak
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                        <i class="fas fa-envelope text-primary"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-sm">inda_maharaniBk@bimbingankonseling.edu</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                        <i class="fas fa-phone text-primary"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-sm">+62 812 3456 7890</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                        <i class="fas fa-calendar text-primary"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-sm">Tersedia: Senin-Jumat, 09:00-15:00</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                        <i class="fas fa-map-marker-alt text-primary"></i>
+                                    </div>
+                                    <span class="text-gray-600 text-sm">Fakultas Keguruan dan Ilmu Pendidikan, Universitas Tadulako</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="btn-primary group">
+                                <i class="fas fa-calendar-check mr-2"></i>
+                                Jadwalkan Konsultasi
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                            <a href="https://wa.me/6281234567890" class="btn-secondary">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                Chat via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials Slider -->
+            <div class="mt-10 bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="text-xl font-semibold text-dark mb-6 text-center">Apa Kata Mereka</h4>
+                
+                <div class="testimonial-slider">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Testimonial 1 -->
+                        <div class="bg-blue-50 p-6 rounded-lg relative">
+                            <div class="absolute -top-3 -left-3 text-3xl text-primary opacity-20">"</div>
+                            <p class="text-gray-600 text-sm italic mb-4">
+                                Inda sangat membantu dalam mengarahkan saya menemukan jurusan yang tepat sesuai minat dan bakat. Pendekatannya yang sabar dan penuh pengertian membuat saya nyaman menceritakan keresahan saya.
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                    <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Testimonial" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <p class="text-gray-800 font-medium text-sm">Dina Pratiwi</p>
+                                    <p class="text-gray-500 text-xs">Siswa SMA Kelas 12</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="bg-blue-50 p-6 rounded-lg relative">
+                            <div class="absolute -top-3 -left-3 text-3xl text-primary opacity-20">"</div>
+                            <p class="text-gray-600 text-sm italic mb-4">
+                                Sebagai orangtua, saya sangat terkesan dengan pendekatan Inda dalam membantu anak saya yang sedang mengalami demotivasi belajar. Hasilnya sangat terlihat dalam beberapa minggu.
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Testimonial" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <p class="text-gray-800 font-medium text-sm">Budi Santoso</p>
+                                    <p class="text-gray-500 text-xs">Orangtua Siswa</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="bg-blue-50 p-6 rounded-lg relative">
+                            <div class="absolute -top-3 -left-3 text-3xl text-primary opacity-20">"</div>
+                            <p class="text-gray-600 text-sm italic mb-4">
+                                Program manajemen stres yang dibimbing oleh Inda sangat membantu siswa-siswa kami menghadapi ujian akhir. Metodenya praktis dan mudah diterapkan dalam kehidupan sehari-hari.
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Testimonial" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <p class="text-gray-800 font-medium text-sm">Siti Rahayu</p>
+                                    <p class="text-gray-500 text-xs">Guru BK SMA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="mt-8 text-center" data-aos="fade-up" data-aos-delay="400">
+                <p class="text-gray-600 mb-4">Hari ini adalah langkah awal untuk memahami diri dan potensi Anda lebih baik</p>
+                <a href="#" class="inline-block bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:transform hover:-translate-y-1 transition-all">
+                    Mulai Perjalanan Bersama Saya
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</section>
+
+    <!-- Page Header -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Hubungi Saya!</h1>
+            <p class="max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
+                Saya siap membantu Anda dan menjawab pertanyaan tentang Bimbingan Konseling
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Info & Form Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Information -->
+                <div class="lg:w-1/3" data-aos="fade-right">
+                    <h2 class="text-2xl font-bold text-dark mb-6">Informasi Kontak</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Lokasi</h3>
+                                <p class="text-gray-600">
+                                    Jl. Pendidikan No. 123<br>
+                                    Jakarta Pusat, 10110<br>
+                                    Indonesia
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                <i class="fas fa-phone-alt text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Telepon</h3>
+                                <p class="text-gray-600">+62 812 3456 7890</p>
+                                <p class="text-gray-600">+62 21 567 8901</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                <i class="fas fa-envelope text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Email</h3>
+                                <p class="text-gray-600">info@bimbingankonseling.edu</p>
+                                <p class="text-gray-600">bantuan@bimbingankonseling.edu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                                <i class="fas fa-clock text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Jam Operasional</h3>
+                                <p class="text-gray-600">Senin - Jumat: 08.00 - 17.00 WIB</p>
+                                <p class="text-gray-600">Sabtu: 09.00 - 13.00 WIB</p>
+                                <p class="text-gray-600">Minggu & Hari Libur: Tutup</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="font-semibold text-lg mb-4">Ikuti Saya</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/indajw/" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-red-600 text-white p-3 rounded-full hover:bg-red-700 transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="bg-blue-800 text-white p-3 rounded-full hover:bg-blue-900 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="lg:w-2/3" data-aos="fade-left">
+                    <h2 class="text-2xl font-bold text-dark mb-6">Kirim Pesan</h2>
+                    <p class="text-gray-600 mb-8">
+                        Punya pertanyaan atau ingin informasi lebih lanjut? Silakan isi formulir di bawah ini dan  saya akan segera menghubungi Anda kembali.
+                    </p>
+                    
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Nomor Telepon</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subjek</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
+                                    <option value="" disabled selected>Pilih subjek pesan</option>
+                                    <option value="info">Informasi Umum</option>
+                                    <option value="service">Layanan</option>
+                                    <option value="collaboration">Kerja Sama</option>
+                                    <option value="career">Karir & Magang</option>
+                                    <option value="other">Lainnya</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tulis pesan Anda di sini..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <input type="checkbox" id="privacy" name="privacy" class="mt-1 mr-2">
+                            <label for="privacy" class="text-gray-600 text-sm">
+                                Dengan mengirimkan formulir ini, Anda menyetujui <a href="#" class="text-primary hover:underline">Kebijakan Privasi</a> saya dan memberikan izin untuk dikontak kembali.
+                            </label>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="btn-primary">
+                                Kirim Pesan
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-dark mb-8 text-center" data-aos="fade-up">Lokasi Saya</h2>
+            
+            <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in">
+                <!-- Embed Google Maps -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6664463317414!2d106.82496851536929!3d-6.175392395529165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1589267613293!5m2!1sid!2sid"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-dark mb-8 text-center" data-aos="fade-up">Pertanyaan Umum</h2>
+                
+                <div class="space-y-4" data-aos="fade-up">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana cara membuat janji konsultasi?</span>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <p class="text-gray-600 pt-4">
+                                Anda dapat membuat janji konsultasi dengan menghubungi saya melalui telepon, email, atau 
+                                mengisi formulir kontak di atas. Sebutkan jenis layanan yang Anda butuhkan dan waktu yang 
+                                diinginkan, kemudian  saya akan mengonfirmasi ketersediaan jadwal.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apakah konsultasi bisa dilakukan secara online?</span>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <p class="text-gray-600 pt-4">
+                                Ya, saya menyediakan layanan konsultasi secara online melalui platform video call yang aman. 
+                                Anda bisa mendapatkan layanan bimbingan dan konseling dari kenyamanan rumah Anda. 
+                                Cukup sampaikan preferensi Anda saat membuat janji.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Berapa biaya untuk layanan konseling?</span>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <p class="text-gray-600 pt-4">
+                                Biaya layanan konseling bervariasi tergantung jenis layanan dan durasi sesi. 
+                             Saya menawarkan berbagai paket yang dapat disesuaikan dengan kebutuhan dan 
+                                anggaran Anda. Silakan hubungi saya untuk informasi biaya yang lebih detail.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana proses kerja sama untuk institusi pendidikan?</span>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <p class="text-gray-600 pt-4">
+                             Saya menawarkan program kerja sama dengan institusi pendidikan untuk menyediakan 
+                                layanan bimbingan konseling komprehensif. Proses dimulai dengan pertemuan awal untuk 
+                                mendiskusikan kebutuhan spesifik institusi Anda, dilanjutkan dengan penyusunan 
+                                proposal dan penandatanganan MoU. Silakan hubungi  saya untuk diskusi lebih lanjut.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apakah ada materi edukasi yang bisa saya akses secara gratis?</span>
+                            <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <p class="text-gray-600 pt-4">
+                                Ya, saya menyediakan berbagai materi edukasi gratis yang dapat diakses di halaman 
+                                Resources website saya. Materi tersebut mencakup artikel, e-book, infografis, dan 
+                                video edukasi tentang berbagai topik Bimbingan Konseling. Anda juga dapat berlangganan 
+                                newsletter saya untuk mendapatkan update materi terbaru.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-10" data-aos="fade-up">
+                    <p class="text-gray-600 mb-4">Masih punya pertanyaan lain?</p>
+                    <a href="tel:+6281234567890" class="btn-primary">
+                        Hubungi Saya Sekarang
+                        <i class="fas fa-phone-alt ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+            <h2 class="text-3xl font-bold mb-6">Bergabung dengan Newsletter Saya</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Dapatkan informasi terbaru tentang Bimbingan Konseling, tips pengembangan diri, dan materi edukasi langsung ke inbox Anda.</p>
+            
+            <div class="max-w-md mx-auto">
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Alamat Email Anda" class="flex-grow px-4 py-3 rounded-lg focus:outline-none">
+                    <button type="submit" class="btn-white sm:flex-shrink-0">
+                        Berlangganan
+                    </button>
+                </form>
+                <p class="text-sm mt-4 text-white text-opacity-80">Dengan berlangganan, Anda menyetujui kebijakan privasi saya. Anda dapat berhenti berlangganan kapan saja.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Footer Column 1 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">BimbinganKonselingEdu</h4>
+                    <p class="text-gray-400 mb-4">Platform edukasi tentang Bimbingan Konseling untuk membantu pengembangan potensi diri melalui layanan profesional.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Footer Column 2 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Tautan Penting</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="./tentang-bk.html" class="text-gray-400 hover:text-white transition">Tentang BK</a></li>
+                        <li><a href="./layanan.html" class="text-gray-400 hover:text-white transition">Layanan</a></li>
+                        <li><a href="./resources.html" class="text-gray-400 hover:text-white transition">Resources</a></li>
+                        <li><a href="./kontak.html" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Column 3 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Materi Edukasi</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./resources.html#artikel" class="text-gray-400 hover:text-white transition">Artikel & Blog</a></li>
+                        <li><a href="./resources.html#ebook" class="text-gray-400 hover:text-white transition">E-book Gratis</a></li>
+                        <li><a href="./resources.html#video" class="text-gray-400 hover:text-white transition">Video & Webinar</a></li>
+                        <li><a href="./resources.html#infografis" class="text-gray-400 hover:text-white transition">Infografis</a></li>
+                        <li><a href="./resources.html#studi-kasus" class="text-gray-400 hover:text-white transition">Studi Kasus</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Column 4 -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Kontak Saya</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+                            <span class="text-gray-400">Jl. Pendidikan No. 123, Jakarta, Indonesia</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-secondary"></i>
+                            <span class="text-gray-400">+62 812 3456 7890</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-secondary"></i>
+                            <span class="text-gray-400">info@bimbingankonseling.edu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 mt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 BimbinganKonselingEdu. Hak Cipta Dilindungi.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition">Kebijakan Privasi</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition">Syarat & Ketentuan</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition">Peta Situs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
